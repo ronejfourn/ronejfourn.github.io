@@ -3,6 +3,12 @@
 
 <head>
     <style>
+        :root {
+            --hcolor: #2E3440;
+            --fcolor: #434C5E;
+            --scolor: #3B4252;
+        }
+
         .main {
             transform: translate(-50%, 0%);
             position: absolute;
@@ -11,21 +17,54 @@
             max-width: 1300px;
             width: 80%;
             height: 3000px;
-            background-color: #3B4252;
+            box-shadow: 0px 0px 200px var(--scolor);
         }
 
-        .header {
-            position: fixed;
-            height: 30%;
-            max-height: 400px;
+        .part {
+            position: sticky;
+            height: 50vh;
+            min-height: 1px;
             width: 100%;
+            z-index: -1;
+        }
+
+        .h {
             top: 0;
             left: 0;
-            background-color: #2E3440;
+            background-color: var(--hcolor);
+        }
+
+        .cutout {
+            position: absolute;
+            width: 51%;
+            height: 20vh;
+            min-height: 1px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .one {
+            background-color: var(--fcolor);
+            bottom: -11vh;
+            right: 0;
+            box-shadow: inset 0px 10px 3px var(--scolor);
+        }
+
+        .two {
+            background-color: var(--hcolor);
+            top: -11vh;
+            left: 0;
+            box-shadow: 0px 10px 3px var(--scolor);
+        }
+
+        .f {
+            top: 50vh;
+            left: 0;
+            background-color: var(--fcolor);
         }
 
         body {
-            background-color: #4c566a;
+            background-color: #D8DEE9;
             margin: 0;
         }
     </style>
@@ -33,9 +72,11 @@
 
 <body>
     <div class="main">
-        <div class="header">
-            <div class="cutout"></div>
-            <div class="cutin"></div>
+        <div class="part h">
+            <div class="cutout one"></div>
+        </div>
+        <div class="part f">
+            <div class="cutout two"></div>
         </div>
     </div>
 </body>

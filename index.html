@@ -3,120 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        :root {
-            --hcolor: #2E3440;
-            --fcolor: #434C5E;
-            --scolor: #3B4252;
-        }
-
-        .main {
-            overflow-x: hidden;
-            transform: translate(-50%, 0%);
-            position: absolute;
-            top: 0%;
-            left: 50%;
-            max-width: 1300px;
-            width: 80%;
-            height: 100vh;
-            box-shadow: 0px 0px 200px var(--scolor);
-        }
-
-        .part {
-            position: absolute;
-            height: 50vh;
-            min-height: 1px;
-            width: 100%;
-            z-index: -1;
-        }
-
-        .h {
-            top: 0;
-            left: 0;
-            background-color: var(--hcolor);
-        }
-
-        .cutout {
-            position: absolute;
-            width: 50%;
-            height: 20vh;
-            min-height: 1px;
-            z-index: 1;
-            animation-iteration-count: infinite;
-            animation-duration: 4s;
-            animation-direction: alternate;
-            animation-timing-function: ease-in-out;
-            font-size: calc(16px + 0.5vw);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #D8DEE9;
-            font-family: "Fira Code";
-        }
-
-        .one {
-            background-color: var(--fcolor);
-            bottom: -10vh;
-            right: 0;
-            box-shadow: inset 0px 10px 3px var(--scolor);
-            animation-name: move1;
-            transform: skew(-45deg);
-        }
-
-        p {
-            animation: move1 4s ease-in-out infinite alternate;
-        }
-
-        .two {
-            background-color: var(--hcolor);
-            top: -10vh;
-            left: 0;
-            box-shadow: 0px 10px 3px var(--scolor);
-            animation-name: move2;
-            transform: skew(45deg);
-        }
-
-        @keyframes move1 {
-            from {
-                right: 0;
-                transform: skew(-45deg)
-            }
-
-            to {
-                right: 50%;
-                transform: skew(45deg)
-            }
-        }
-
-        @keyframes move2 {
-            from {
-                left: 0;
-                transform: skew(45deg)
-            }
-
-            to {
-                left: 50%;
-                transform: skew(-45deg)
-            }
-        }
-
-        .f {
-            top: 50vh;
-            left: 0;
-            background-color: var(--fcolor);
-        }
-
-        body {
-            background-color: #D8DEE9;
-            margin: 0;
-        }
-
-        @media only screen and (max-width: 700px) {
-            .main {
-                width: 100%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style/stylesheet.css" />
 </head>
 
 <body>
@@ -126,10 +13,11 @@
         </div>
         <div class="part f">
             <div class="cutout two">
-                <p>Work In Progress</p>
+                <p><b id='showScroll'></b></p>
             </div>
         </div>
     </div>
+    <script src = "scripts/scroll.js"></script>
 </body>
 
 </html>

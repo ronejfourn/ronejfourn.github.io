@@ -1,0 +1,108 @@
+* {
+    margin : 0;
+    padding: 0;
+    color: #fff;
+    font-size: 13pt;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+body {
+    background-color: #191919;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.inner {
+    display: flex;
+    width  : 80vw;
+    margin : 0 10vw;
+}
+
+#topbar {
+    background-color: #2c2c2c;
+}
+
+#topbar>.inner{
+    padding: 10px;
+}
+
+#brand {
+    font-size: 25pt;
+    color: #fff;
+    margin-right: 30px;
+}
+
+.navi {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+
+#navlist {
+    display : flex;
+    list-style-type: none;
+}
+
+.topbarlinks {
+    font-size: 15pt;
+    color: #9A9587;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: none;
+    text-align: left;
+    padding: 10px;
+}
+
+tr {
+    background-color: #2c2c2c;
+}
+
+tr:nth-child(even) {
+    background-color: #4a4a4a;
+}
+
+#table-container {
+    margin-top: 70px;
+}
+
+@media screen and (max-width: 875px) {
+    /* Collapse Nav Bar */
+}
+
+@media screen and (max-width: 680px) {
+    /* Collapse Nav Bar */
+    #table-container {
+        width: 100%;
+        margin: 0;
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    td, th {
+        padding: 10px 0.1vw;
+    }
+}
